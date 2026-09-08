@@ -4,7 +4,12 @@
  ;; is standalone (forkable outside the workspace); the :local/root paths
  ;; only resolve inside the monorepo checkout -- a standalone fork should
  ;; override them with git coordinates.
- :deps {io.github.com-junkawasaki/langgraph-clj
+ :deps {
+        ;; kotoba.lang.text, not clojure.string. Pinned as an explicit floor:
+        ;; tools.deps takes the NEWEST sha it is shown, so without a floor here
+        ;; this repo silently rides whatever a sibling happens to name.
+        io.github.kotoba-lang/text {:git/sha "73bdb13ae7a3d004b44bca08be03a3191157a38f"}
+       io.github.com-junkawasaki/langgraph-clj
         {:local/root "../../kotoba-lang/langgraph"}
         ;; campaign lifecycle, reward tiers and the launch-review rule set
         ;; (ADR-2607268500). The rules live there, behind that library's

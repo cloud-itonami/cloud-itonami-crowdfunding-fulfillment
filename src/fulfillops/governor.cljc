@@ -55,7 +55,7 @@
     - `:disclose-failure` and `:flag-fulfillment-concern` ALWAYS escalate.
       A failure disclosure is a named person saying they cannot deliver;
       no actor makes that statement on someone's behalf."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [crowdfunding.fulfillment :as ff]
             [fulfillops.store :as store]))
 
@@ -199,7 +199,7 @@
       :detail (str ":effect は :propose のみ許可されるが " (pr-str (:effect proposal)) " が提案された")}]))
 
 (defn- text-blob [proposal]
-  (str/lower-case (pr-str (select-keys proposal [:op :summary :rationale :cites]))))
+  (str/lower (pr-str (select-keys proposal [:op :summary :rationale :cites]))))
 
 (defn- scope-exclusion-violations [proposal]
   (let [op (:op proposal)
