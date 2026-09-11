@@ -89,9 +89,9 @@ is `false` on every result.
 ## Run it
 
 ```bash
-clojure -M:dev:run     # offline demo: survey → ship → gates, plus each refusal
-clojure -M:dev:test    # 24 tests
-clojure -M:lint
+kbb -M:dev:run     # offline demo: survey → ship → gates, plus each refusal
+kbb -M:dev:test    # 24 tests
+kbb -M:lint
 ```
 
 ## Licence

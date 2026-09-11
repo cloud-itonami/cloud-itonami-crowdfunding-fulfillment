@@ -2,7 +2,7 @@
   "Offline demo: survey a backer, ship with a tracking reference, watch an
   untracked shipment and a smuggled address get refused, watch a refund
   attempt hit a permanent scope exclusion, and see the payout gates this
-  actor's records unlock. `clojure -M:dev:run`."
+  actor's records unlock. `kbb -M:dev:run`."
   (:require [fulfillops.operation :as operation]
             [fulfillops.store :as store]
             [langgraph.graph :as g]))
