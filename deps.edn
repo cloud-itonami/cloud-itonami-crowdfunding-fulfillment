@@ -16,7 +16,7 @@
         ;; no-adjudication boundary -- this actor governs them, it does not
         ;; reimplement them, and it never turns findings into a verdict.
         io.github.kotoba-lang/crowdfunding
-        {:local/root "../../kotoba-lang/crowdfunding"}}
+        {:local/root "../../kotoba-lang/kotoba/lib/kotoba.crowdfunding"}}
  :aliases
  {;; This alias held an :override-deps entry for the retired coordinate
   ;; io.github.com-junkawasaki/langchain-clj. langgraph declares the same
